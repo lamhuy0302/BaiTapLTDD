@@ -19,14 +19,14 @@
             tools:replace="android:required" />
 
         <activity android:name=".ActivityBai3">
-
-        </activity>
-        <activity android:name=".ActivityBai4">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ActivityBai4">
+
         </activity>
     </application>
 
