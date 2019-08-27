@@ -1,61 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-<TextView
-    android:textSize="20sp"
-    android:id="@+id/tv1"
-    android:padding="10dp"
-    android:text="Chuyen doi nam duong lich"
-    android:gravity="center"
-    android:textColor="#fff"
-    android:background="@color/colorAccent"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
         android:gravity="center"
         android:padding="10dp"
+        android:text="Chuyen doi nam duong lich"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <TextView
         android:id="@+id/year"
-        android:layout_below="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:textSize="20sp"
+        android:layout_below="@+id/tv1"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="Nam duong lich:"
-        />
+        android:textSize="20sp" />
+
     <EditText
         android:id="@+id/etNamDuong"
-        android:layout_below="@+id/tv1"
-        android:layout_toRightOf="@+id/year"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        android:layout_below="@+id/tv1"
+        android:layout_toRightOf="@+id/year" />
+
     <Button
-        android:onClick="ChuyenNam"
         android:id="@+id/btnC"
-        android:text="Chuyen doi"
-        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/year"
         android:layout_toRightOf="@+id/year"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:gravity="center"
+        android:onClick="ChuyenNam"
         android:padding="10dp"
+        android:text="Chuyen doi" />
+
+    <TextView
         android:id="@+id/lunaryear"
-        android:layout_below="@+id/btnC"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:textSize="20sp"
-        android:text="Nam am lich:"
-        />
-    <TextView
+        android:layout_below="@+id/btnC"
         android:gravity="center"
         android:padding="10dp"
-        android:textColor="#fff"
-        android:background="#289"
+        android:text="Nam am lich:"
+        android:textSize="20sp" />
+
+    <TextView
         android:id="@+id/tvNamAm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_below="@+id/btnC"
         android:layout_toRightOf="@+id/year"
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:background="#289"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#fff" />
 </RelativeLayout>

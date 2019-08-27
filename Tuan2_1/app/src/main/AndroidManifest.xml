@@ -10,10 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".ActivityBai2">
-
-        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ActivityBai2"></activity>
 
         <uses-library
             android:name="com.google.android.things"
@@ -21,6 +19,9 @@
             tools:replace="android:required" />
 
         <activity android:name=".ActivityBai3">
+
+        </activity>
+        <activity android:name=".ActivityBai4">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
