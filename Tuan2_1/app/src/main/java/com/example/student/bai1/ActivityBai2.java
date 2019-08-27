@@ -41,4 +41,8 @@ public class ActivityBai2 extends Activity {
         int kq = C*9/5+32;
         ((EditText)findViewById(R.id.etC)).setText(""+kq);
     }
+    public void Clear(View v){
+        ((EditText)findViewById(R.id.etC)).setText("");
+        ((EditText)findViewById(R.id.etF)).setText("");
+    }
 }

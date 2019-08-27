@@ -58,6 +58,7 @@
         </LinearLayout>
     </LinearLayout>
     <Button
+        android:onClick="Clear"
         android:id="@+id/btnClear"
         android:text="Clear"
         android:layout_width="match_parent"
