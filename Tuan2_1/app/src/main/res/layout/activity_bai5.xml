@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="Thông tin hoá đơn:"
+            android:background="#FDFF23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tvTen"
+                android:text="Tên Khách Hàng: "
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+            <EditText
+                android:layout_toRightOf="@+id/tvTen"
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_below="@+id/tvTen"
+                android:gravity="center"
+                android:id="@+id/tvSlSach"
+                android:text="Số lượng sách: "
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+            <EditText
+                android:layout_below="@+id/tvTen"
+                android:layout_toRightOf="@+id/tvTen"
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+            <CheckBox
+                android:id="@+id/cbVip"
+                android:layout_below="@+id/tvSlSach"
+                android:layout_toRightOf="@+id/tvTen"
+                android:text="Khách hàng là VIP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@+id/cbVip"
+                android:gravity="center"
+                android:text="Thành tiền: "
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+            <TextView
+                android:gravity="center"
+                android:background="#CAC9CF"
+                android:textColor="#51AE4C"
+                android:layout_below="@+id/cbVip"
+                android:layout_toRightOf="@+id/tvTen"
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:text="Thông tin thống kê:"
+            android:background="#FDFF23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tvTongKH"
+                android:text="Tổng số KH:            "
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+            <EditText
+                android:layout_toRightOf="@+id/tvTongKH"
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_below="@+id/tvTongKH"
+                android:gravity="center"
+                android:id="@+id/tvTongVip"
+                android:text="Tổng số KH là VIP: "
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+            <EditText
+                android:layout_below="@+id/tvTongKH"
+                android:layout_toRightOf="@+id/tvTongKH"
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+            <TextView
+                android:layout_below="@+id/tvTongVip"
+                android:gravity="center"
+                android:text="Tổng doanh thu: "
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+            <EditText
+                android:layout_below="@+id/tvTongVip"
+                android:layout_toRightOf="@+id/tvTongKH"
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </RelativeLayout>
+        <TextView
+            android:background="#00AE8B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
