@@ -18,15 +18,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     >
+
     <TextView
-        android:textSize="15sp"
-        android:padding="10dp"
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ho ten: " />
+        android:padding="10dp"
+        android:text="Ho ten: "
+        android:textSize="15sp" />
 
     <EditText
+        android:inputType="text"
         android:layout_toRightOf="@+id/name"
         android:id="@+id/etName"
         android:layout_width="match_parent"
@@ -43,6 +45,7 @@
         android:text="CMND" />
 
     <EditText
+        android:inputType="number"
         android:layout_below="@+id/etName"
         android:layout_toRightOf="@+id/name"
         android:id="@+id/etCMND"
@@ -65,30 +68,29 @@
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        android:padding="10dp"
+        android:orientation="horizontal">
             <RadioButton
+                android:id="@+id/rbTrungcap"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Trung cap"
                 />
             <RadioButton
+                android:id="@+id/rbCaodang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Cao dang"
                 />
             <RadioButton
+                android:id="@+id/rbDaihoc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Dai hoc"
                 />
-        </LinearLayout>
     </RadioGroup>
     <TextView
         android:padding="5dp"
@@ -96,7 +98,7 @@
         android:gravity="center"
         android:background="#00FFFF"
         android:textColor="#ffff00"
-        android:id="@+id/textView4"
+        android:id="@+id/tvSothich"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="So thich" />
@@ -104,31 +106,30 @@
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
             <CheckBox
+                android:id="@+id/cbDocbao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Doc bao"
                 />
             <CheckBox
+                android:id="@+id/cbDocsach"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Doc sach"
                 />
             <CheckBox
+                android:id="@+id/cbDoccoding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Doc coding"
                 />
-        </LinearLayout>
     </RadioGroup>
     <TextView
         android:padding="5dp"
@@ -136,7 +137,7 @@
         android:gravity="center"
         android:background="#00FFFF"
         android:textColor="#ffff00"
-        android:id="@+id/textView4"
+        android:id="@+id/tvThongitnbosung"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Thong tin bo sung" />
@@ -144,8 +145,10 @@
     android:layout_width="match_parent"
     android:layout_height="150dp" />
     <Button
+        android:id="@+id/btnGui"
         android:text="Gui thong tin"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="GuiThongTin"/>
 </LinearLayout>

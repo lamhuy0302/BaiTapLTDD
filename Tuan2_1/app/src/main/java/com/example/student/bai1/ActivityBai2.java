@@ -39,7 +39,7 @@ public class ActivityBai2 extends Activity {
     public void CtoF(View v){
         int C = Integer.parseInt(((EditText)findViewById(R.id.etC)).getText().toString());
         int kq = C*9/5+32;
-        ((EditText)findViewById(R.id.etC)).setText(""+kq);
+        ((EditText)findViewById(R.id.etF)).setText(""+kq);
     }
     public void Clear(View v){
         ((EditText)findViewById(R.id.etC)).setText("");

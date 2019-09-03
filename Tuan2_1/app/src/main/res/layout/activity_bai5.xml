@@ -35,6 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp" />
             <EditText
+                android:id="@+id/etSoLuongSach"
                 android:layout_below="@+id/tvTen"
                 android:layout_toRightOf="@+id/tvTen"
                 android:layout_weight="5"
@@ -54,6 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp" />
             <TextView
+                android:id="@+id/tvTongTien"
                 android:gravity="center"
                 android:background="#CAC9CF"
                 android:textColor="#51AE4C"
@@ -63,7 +65,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"/>
         </RelativeLayout>
-
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnTinhTT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tính TT"
+                android:layout_weight="1"
+                />
+            <Button
+                android:onClick="Save"
+                android:id="@+id/btnTiepTuc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tiếp"
+                android:layout_weight="1"
+                />
+            <Button
+                android:id="@+id/btnTK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thống kê"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
         <TextView
             android:text="Thông tin thống kê:"
             android:background="#FDFF23"
@@ -80,6 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp" />
             <EditText
+                android:id="@+id/etTongKH"
                 android:layout_toRightOf="@+id/tvTongKH"
                 android:layout_weight="5"
                 android:layout_width="match_parent"
@@ -92,6 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp" />
             <EditText
+                android:id="@+id/etTongDoanhThu"
                 android:layout_below="@+id/tvTongKH"
                 android:layout_toRightOf="@+id/tvTongKH"
                 android:layout_weight="5"
@@ -113,6 +143,9 @@
         <TextView
             android:background="#00AE8B"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>
