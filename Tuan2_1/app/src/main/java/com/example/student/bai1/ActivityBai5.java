@@ -1,5 +1,6 @@
 package com.example.student.bai1;
 
+import android.support.constraint.solver.SolverVariable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,10 +31,12 @@ public class ActivityBai5 extends AppCompatActivity {
             this.Tien=Tien;
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bai5);
+        etTen=(EditText)findViewById(R.id.etTen);
         btnTinh =(Button)findViewById(R.id.btnTinhTT);
         btnTiep = (Button)findViewById(R.id.btnTiepTuc);
         btnThongKe = (Button)findViewById(R.id.btnTK);
@@ -42,6 +45,7 @@ public class ActivityBai5 extends AppCompatActivity {
         tvThanhTien = (TextView)findViewById(R.id.tvTongTien);
         etTongKhach = (EditText)findViewById(R.id.etTongKH);
         ListKH = new ArrayList<KhachHang>();
+
 
         btnTinh.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,44 +56,35 @@ public class ActivityBai5 extends AppCompatActivity {
                 else tvThanhTien.setText(""+(sl*20000));
             }
         });
-        /*btnTiep.setOnClickListener(new View.OnClickListener() {
+        btnTiep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"ok",Toast.LENGTH_LONG);
                 int vip;
-                try {
                     if(cbVip.isChecked()==true)
                         vip = 1;
                     else vip= 0;
                     ListKH.add(new KhachHang(etTen.getText().toString(),vip,Integer.parseInt(tvThanhTien.getText().toString())));
-                    Toast.makeText(getApplicationContext(),"ok",Toast.LENGTH_LONG);
-                }catch (Exception e){
-                    Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG);
-                }
-
+                    Toast.makeText(getApplicationContext(),"Thêm thành công!!!",Toast.LENGTH_LONG).show();
             }
-        });*/
+        });
         btnThongKe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int soVip = 0;
                 etTongKhach.setText(""+ListKH.size());
+                for(int row =1;row<=ListKH.size();row++){
+
+                    if(ListKH.get(row).Vip ==1){
+                        row++;
+                    }
+                    soVip++;
+                }
+                etTongVip.setText(""+soVip);
             }
         });
 
     }
-    private void Save(View v){
-        
-        int vip;
-        try {
-            if(cbVip.isChecked()==true)
-                vip = 1;
-            else vip= 0;
-            ListKH.add(new KhachHang(etTen.getText().toString(),vip,Integer.parseInt(tvThanhTien.getText().toString())));
-            Toast.makeText(getApplicationContext(),"ok",Toast.LENGTH_LONG);
-        }catch (Exception e){
-            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG);
-        }
-    }
+
 
 
 }
