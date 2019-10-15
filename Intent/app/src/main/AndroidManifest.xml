@@ -9,14 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".UriActivity">
+
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <data android:scheme="loan" android:host="coreservlets.com" />
             </intent-filter>
         </activity>
         <activity android:name=".LoanCal">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="loan" android:host="coreservlets.com" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Tabbed">
 
         </activity>
     </application>

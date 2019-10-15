@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    tools:context=".UriActivity">
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loan amount: "/>
+        <EditText
+            android:id="@+id/etLoanAmount"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content">
+        <requestFocus></requestFocus>
+        </EditText>
+        </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interest Rate: "/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etInterestRate"
+        />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Months: "/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etMonth"
+        />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/btnCalUri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cal"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_span="20"
+            android:background="@color/colorAccent"
+            android:layout_height="10dp"
+            android:layout_width="match_parent"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monthly Payment: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvtMonthlyPay2"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Payment: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTotal2"/>
+    </TableRow>
+
+</TableLayout>

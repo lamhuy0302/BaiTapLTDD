@@ -1,6 +1,7 @@
 package com.example.student.btintent;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.widget.TextView;
 import android.app.Activity;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ public class LoanCal extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_available_input);
         setInputExtras();
+        setInputUri();
         CalAndPrint();
 
     }
@@ -50,5 +52,32 @@ public class LoanCal extends Activity {
         if (loan>0) mloan= loan;
         if (rate>0) mrate = rate;
         if(months>0) mmonths = months;
+
+    }
+    //Uri
+    private void  setInputUri(){
+        Uri uri = getIntent().getData();
+        if(uri!=null){
+            double loan = getDoubleParam(uri,"loan");
+            double rate = getDoubleParam(uri,"rate");
+            long months = getLongParam(uri,"months");
+            setInputs(loan,rate,months);
+        }
+    }
+    private  double getDoubleParam(Uri uri, String s){
+        String string = uri.getQueryParameter(s);
+        double value = 0.0;
+        try{
+            value = Double.parseDouble(string);
+        }catch (Exception e){}
+        return value;
+    }
+    private long getLongParam(Uri uri, String s){
+        String string = uri.getQueryParameter(s);
+        long value = 0;
+        try {
+            value=Long.parseLong(string);
+        }catch (Exception e){}
+        return value;
     }
 }
