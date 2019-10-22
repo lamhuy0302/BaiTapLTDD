@@ -16,7 +16,7 @@ public class DB extends SQLiteOpenHelper {
     private int id;
 
     public DB(@Nullable Context context) {
-        super(context, "HongHuyDbContext", null, 1);
+        super(context, "HuyDb", null, 1);
     }
 
     @Override

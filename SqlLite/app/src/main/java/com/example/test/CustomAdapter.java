@@ -22,12 +22,12 @@ public class CustomAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return lstSach.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return lstSach.get(i);
     }
 
     @Override
