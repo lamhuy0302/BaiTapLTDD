@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lv;
     ArrayList<Sach> lstS;
     CustomAdapter customAdapter;
-    Button btn;
+    Button btnAdd,btnEdit;
     EditText tvId,tvTen;
 
     @Override
@@ -32,14 +32,24 @@ public class MainActivity extends AppCompatActivity {
         Sach s = new Sach(1,"De men phieu luu ky");
         db.addSach(s);
         LoadItem();
-        btn = findViewById(R.id.btnAdd);
+        btnAdd = findViewById(R.id.btnAdd);
+        btnEdit = findViewById(R.id.btnEdit);
         tvId = findViewById(R.id.etId);
         tvTen = findViewById(R.id.etName);
-        btn.setOnClickListener(new View.OnClickListener() {
+        btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Sach newS = new Sach(Integer.parseInt(tvId.getText().toString()),tvTen.getText().toString());
                 db.addSach(newS);
+                customAdapter = new CustomAdapter(MainActivity.this,db.getAllSach());
+                lv.setAdapter(customAdapter);
+            }
+        });
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Sach newS = new Sach(Integer.parseInt(tvId.getText().toString()),tvTen.getText().toString());
+                db.editSach(newS);
                 customAdapter = new CustomAdapter(MainActivity.this,db.getAllSach());
                 lv.setAdapter(customAdapter);
             }

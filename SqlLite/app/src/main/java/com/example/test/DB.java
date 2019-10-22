@@ -33,7 +33,18 @@ public class DB extends SQLiteOpenHelper {
         sqLiteDatabase.insert("SachDb",null,cv);
         sqLiteDatabase.close();
     }
+    public void editSach(Sach s){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("id",s.getId());
+        cv.put("name",s.getTen());
+        sqLiteDatabase.update("SachDb",cv,"id="+Integer.toString(s.id),null);
+        sqLiteDatabase.close();
+    }
+    public void removeSach(int id){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
+    }
     public ArrayList<Sach> getAllSach() {
         SQLiteDatabase db = this.getReadableDatabase();
         ArrayList<Sach> listItems = new ArrayList<Sach>();

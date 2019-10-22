@@ -30,6 +30,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Insert"/>
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit"/>
     <ListView
         android:id="@+id/lvSach"
         android:layout_width="match_parent"
